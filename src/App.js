@@ -16,6 +16,7 @@ function App() {
   }
   return (
   <section className='section-center'>
+    <p> Max limit is 8 para in this  </p>
     <h3>Tired of boring Lorium ipsum?</h3>
     <form className='lorem-form' onSubmit={handleSubmit}>
       <label htmlFor='amount'>paragraphs:</label>
