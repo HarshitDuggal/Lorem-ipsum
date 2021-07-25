@@ -5,7 +5,14 @@ function App() {
   const [count, setcount] = useState(0);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Hello World');
+    let amount = parseInt(count)
+    if(count<=0){
+      amount = 1
+    }
+    if(count > 8){
+      amount = 8
+    }
+    setInfo(data.slice(0,amount))
   }
   return (
   <section className='section-center'>
@@ -15,6 +22,11 @@ function App() {
       <input type='number' name='amount' id='amount' value={count} onChange={(e) => {setcount(e.target.value)}}/>
       <button type='submit' className='btn'>Generate</button>
     </form>
+    <article className='lorem-text'>
+      {Info.map((inf,index) => {
+        return <p key={index}>{inf}</p>
+      })}
+    </article>
   </section>
     );
 }
